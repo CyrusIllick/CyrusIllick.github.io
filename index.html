@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyrus Illick</title>
+  <meta name="author" content="Cyrus Illick">
+  <meta name="description" content="Cyrus Illick is a Computer Science PhD student at Columbia University working on time-series modeling, causal inference, and Internet congestion control.">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet">
+
+  <!-- Layout and style adapted from Jon Barron's website template -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      color: #000;
+      background: #fff;
+    }
+
+    main { max-width: 800px; margin: 0 auto; padding: 20px 20px 40px; }
+
+    a { color: #1772d0; text-decoration: none; }
+    a:hover, a:focus { color: #f09228; }
+
+    header { display: flex; align-items: center; gap: 5%; }
+    .intro { flex: 63; }
+    .photo { flex: 37; }
+    .photo img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+
+    .name { margin: 20px 0 14px; font-size: 32px; font-weight: normal; text-align: center; }
+    .links { text-align: center; }
+
+    h2 { margin: 36px 0 14px; font-size: 22px; font-weight: normal; }
+
+    .paper { margin: 0 0 22px; }
+    .papertitle { font-weight: 700; }
+    .award { color: #d00; }
+    .paper p { margin: 6px 0 0; }
+
+    .teaching { list-style: none; padding: 0; margin: 0; }
+    .teaching li { margin: 0 0 6px; }
+
+    footer { margin-top: 48px; font-size: 12px; text-align: center; color: #555; }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column-reverse; }
+      .photo { width: 55%; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <header>
+      <div class="intro">
+        <h1 class="name">Cyrus Illick</h1>
+        <p>
+          I'm a Computer Science PhD student at Columbia University, advised by
+          <a href="https://www.cs.columbia.edu/~misra/">Vishal Misra</a> and
+          <a href="https://www.cs.columbia.edu/~danr/">Dan Rubenstein</a>.
+          I work on time-series modeling and causal inference, in particular counterfactual
+          estimation. I'm especially interested in the potential of time-series and tabular
+          foundation models, and how they compare with statistical methods designed around the
+          assumptions of a particular problem. I have also worked on Internet congestion control,
+          focusing on how different end-to-end algorithms compete for shared bandwidth.
+        </p>
+        <p>
+          Research interests: time-series and tabular foundation models, training foundation models
+          on synthetic data, time-series modeling and forecasting, causal inference.
+        </p>
+        <p>I received a B.A. (2023) and an M.S. (2025) in Computer Science from Columbia.</p>
+        <p class="links">
+          <a href="mailto:cdi2105@columbia.edu">Email</a> &nbsp;/&nbsp;
+          <a href="https://scholar.google.com/citations?user=Pz8pvJgAAAAJ&amp;hl=en">Google Scholar</a> &nbsp;/&nbsp;
+          <a href="https://www.linkedin.com/in/cyrus-illick-0a9627186/">LinkedIn</a>
+        </p>
+      </div>
+      <div class="photo">
+        <img src="assets/pictureofme.png" alt="Photo of Cyrus Illick">
+      </div>
+    </header>
+
+    <h2>Publications</h2>
+
+    <div class="paper">
+      <span class="papertitle">Time-Aware Synthetic Control</span><br>
+      Saeyoung Rho, <strong>Cyrus Illick</strong>, Samhitha Narasipura, Alberto Abadie, Daniel Hsu, Vishal Misra<br>
+      <em>AISTATS</em>, 2026<br>
+      <a href="https://arxiv.org/abs/2601.03099">arXiv</a> /
+      <a href="https://openreview.net/pdf?id=yoOhnpCUc4">workshop version</a> (Learning from Time Series for Health @ NeurIPS 2025)
+      <p>We extend synthetic control with a state-space model (Kalman filter, RTS smoother) that uses
+        the time ordering standard synthetic control ignores, improving accuracy in many settings.</p>
+    </div>
+
+    <div class="paper">
+      <span class="papertitle">Making Congestion Control Algorithms Insensitive to Underlying Propagation Delays</span><br>
+      <strong>Cyrus Illick</strong>, Michael Roger, Vishal Misra, Dan Rubenstein<br>
+      <em>New Ideas in Networked Systems (NINeS)</em>, 2026<br>
+      <a href="https://nines-conference.org/papers/p027-Illick.pdf">paper</a>
+      <p>We show that congestion control algorithms share bandwidth unpredictably as propagation
+        delay varies, and design a sender-side control loop, run alongside existing algorithms, that
+        equalizes the delay every flow sees, making bandwidth shares predictable.</p>
+    </div>
+
+    <div class="paper">
+      <span class="papertitle">Causal Inference with Time Series Foundation Models</span><br>
+      <strong>Cyrus Illick</strong>, Saeyoung Rho, Vishal Misra<br>
+      <em>Causality in the Age of AI Scaling Workshop @ AISTATS</em>, 2026
+      &nbsp;<span class="award">(Best Paper Runner-Up)</span>
+      <p>Viewing counterfactual estimation as forecasting with known future covariates, we ask
+        whether time-series and tabular foundation models (TimesFM, Chronos, TabPFN) can compete
+        with existing synthetic control methods, testing several ways to input the data and
+        identifying where they show potential.</p>
+    </div>
+
+    <h2>Teaching</h2>
+
+    <ul class="teaching">
+      <li><strong>CSEE 6180: Modeling and Performance Evaluation</strong> &mdash; TA, Fall 2025 and Fall 2026</li>
+      <li><strong>COMS W3261: Computer Science Theory</strong> &mdash; TA, Spring 2021 and Fall 2022</li>
+      <li><strong>COMS W3203: Discrete Mathematics</strong> &mdash; TA, Summer 2021</li>
+      <li><strong>CSEE W3827: Fundamentals of Computer Systems</strong> &mdash; TA, Spring 2021</li>
+    </ul>
+
+    <footer>
+      Last updated October 2026. Design from
+      <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>.
+    </footer>
+
+  </main>
+</body>
+</html>
